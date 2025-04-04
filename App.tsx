@@ -8,7 +8,6 @@ import {
   Text,
   useColorScheme,
   View,
-  FlatList,
 } from 'react-native';
 
 import {

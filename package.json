@@ -54,10 +54,6 @@
   "engines": {
     "node": ">=18"
   },
-  "lint-staged": {
-    "src/**/*.{js,md,html,json}": "yarn run prettier --write",
-    "src/**/*.ts": "yarn run eslint --cache --fix"
-  },
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
