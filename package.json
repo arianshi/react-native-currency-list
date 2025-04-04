@@ -1,7 +1,7 @@
 {
   "name": "react-native-currency-list",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.2",
+  "private": false,
   "main": "src/index.tsx",
   "module": "lib/module/index.js",
   "types": "lib/typescript/index.d.ts",
