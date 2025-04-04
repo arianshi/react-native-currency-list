@@ -1,0 +1,1 @@
+{"version":3,"names":["ROUTES","exports","LIST_SCREEN"],"sources":["constants.ts"],"sourcesContent":["export const ROUTES = {\n  LIST_SCREEN: 'ListScreen',\n} as const;\n"],"mappings":";;;;;;AAAO,MAAMA,MAAM,GAAAC,OAAA,CAAAD,MAAA,GAAG;EACpBE,WAAW,EAAE;AACf,CAAU","ignoreList":[]}

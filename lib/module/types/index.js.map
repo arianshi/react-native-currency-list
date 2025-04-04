@@ -1,0 +1,1 @@
+{"version":3,"names":[],"sources":["index.ts"],"sourcesContent":["type Metadata = {\n  data: [];\n};\n\n/**\n * ICurrencyList Context props\n */\ntype ICurrencyListContextProps = {\n  /**\n   * Navigation object of the container app\n   * */\n  parentNavigation?: any;\n  metadata: Metadata;\n};\nexport {\n  ICurrencyListContextProps,\n};\n"],"mappings":"","ignoreList":[]}
