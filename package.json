@@ -2,14 +2,23 @@
   "name": "react-native-currency-list",
   "version": "0.0.1",
   "private": true,
+  "main": "src/index.tsx",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index.tsx",
+  "source": "src/index",
+  "author": "arianandcode@gmail.com",
+  "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build": "bob build"
   },
   "dependencies": {
+    "eslint-plugin-jest": "^28.11.0",
     "react": "19.0.0",
     "react-native": "0.78.2"
   },
@@ -17,6 +26,9 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
+    "@commitlint/cli": "16.3.0",
+    "@commitlint/config-conventional": "16.2.4",
+    "@commitlint/top-level": "16.2.1",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
     "@react-native-community/cli-platform-ios": "15.0.1",
@@ -27,13 +39,33 @@
     "@types/jest": "^29.5.13",
     "@types/react": "^19.0.0",
     "@types/react-test-renderer": "^19.0.0",
-    "eslint": "^8.19.0",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "8.5.0",
+    "husky": "7.0.4",
     "jest": "^29.6.3",
-    "prettier": "2.8.8",
+    "lint-staged": "12.5.0",
+    "prettier": "2.7.1",
+    "react-native-builder-bob": "0.18.2",
     "react-test-renderer": "19.0.0",
     "typescript": "5.0.4"
   },
   "engines": {
     "node": ">=18"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
   }
 }
