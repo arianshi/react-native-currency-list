@@ -3,4 +3,4 @@ export const ROUTES = {
 } as const;
 
 export const PROVIDER_NOT_ADDED =
-  'useCurrencyListContext can not be used with CurrencyListProvider';
+  'useCurrencyListContext cannot be used with CurrencyListProvider';

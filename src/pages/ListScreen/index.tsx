@@ -22,7 +22,7 @@ export default function CurrencyList() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{'List Crypocurrency'}</Text>
+      <Text style={styles.title}>{'List Cryptocurrency'}</Text>
       <SearchBar value={search} onChangeText={setSearch} />
       <FlatList
         data={filtered}
