@@ -1,5 +1,23 @@
-const CurrencyList = () => {
-  return null;
+import React from 'react';
+import CurrencyListNavContainer from './navigations/index';
+import { CurrencyListProvider } from './contexts';
+import type {
+  ICurrencyListContextProps,
+} from './types';
+
+const EnhancedNavContainer = CurrencyListNavContainer;
+
+type CurrencyListModuleProps = ICurrencyListContextProps;
+
+const CurrencyListModule: React.FC<CurrencyListModuleProps> = (
+  contextValue: CurrencyListModuleProps
+) => {
+  console.log('--CurrencyListModule---');
+  return (
+    <CurrencyListProvider value={contextValue}>
+      <EnhancedNavContainer/>
+    </CurrencyListProvider>
+  );
 };
 
-export  { CurrencyList };
+export default CurrencyListModule;
