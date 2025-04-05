@@ -1,12 +1,53 @@
-import React from 'react';
-import { View, Text} from 'react-native';
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 
-const ListScreen = () => {
+import useCurrencyListContext from '../../hooks/useCurrencyListContext';
+
+import styles from './styles';
+import { SearchBar } from '../../components/SearchBar/index';
+import { useCurrencySearch } from '../../hooks/useCurrencySearch';
+
+export default function CurrencyList() {
+  const {
+    metadata: { data },
+  } = useCurrencyListContext();
+
+  const [search, setSearch] = useState('');
+  const filtered = useCurrencySearch(data, search);
+
   return (
-   <View>
-       <Text>I'm list page</Text>
-   </View>
-  );
-};
+    <View style={styles.container}>
+      <Text style={styles.title}>{'List Cryptocurrency'}</Text>
+      <SearchBar value={search} onChangeText={setSearch} />
+      <FlatList
+        data={filtered}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={styles.listContainer}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={styles.itemContainer}
+            onPress={() => console.log('onPress')}
+          >
+            <View style={styles.avatar}>
+              <Text style={styles.avatarText}>
+                {item.name.charAt(0).toUpperCase()}
+              </Text>
+            </View>
 
-export default ListScreen;
+            <View style={styles.nameContainer}>
+              <Text style={styles.nameText}>{item.name}</Text>
+            </View>
+
+            <Text style={styles.symbolText}>{item.symbol}</Text>
+
+          </TouchableOpacity>
+        )}
+      />
+    </View>
+  );
+}

@@ -1967,7 +1967,7 @@
   dependencies:
     color "^4.2.3"
 
-"@react-navigation/native-stack@^7.3.8":
+"@react-navigation/native-stack@7.3.8":
   version "7.3.8"
   resolved "https://registry.yarnpkg.com/@react-navigation/native-stack/-/native-stack-7.3.8.tgz#1a589d4627e62b3a28e7d5bba017ef92d9073f20"
   integrity sha512-g10Xa8Wi996MgQSXg1m+6+2kip+2QN2daJXWylCVVzbLM4qVEnYlwYDfRfE0MUPUBxgAL7bggvW0zi7thX7H1A==
@@ -1975,7 +1975,7 @@
     "@react-navigation/elements" "^2.3.6"
     warn-once "^0.1.1"
 
-"@react-navigation/native@^7.1.4":
+"@react-navigation/native@7.1.4":
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-7.1.4.tgz#0d5f322b5c9838ef768267c6330ddf61b3d8ba40"
   integrity sha512-eechVNCLJ8qQ0yeFZEzSGzQT4nqOI4oD3YAEzhCpVCRy+zWZSEXTGRr6VVjTMRlQCtF2uJm1mWr/o0vF91oAqg==
@@ -3748,19 +3748,19 @@ eslint-plugin-ft-flow@^2.0.1:
     lodash "^4.17.21"
     string-natural-compare "^3.0.1"
 
+eslint-plugin-jest@28.11.0:
+  version "28.11.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-28.11.0.tgz#2641ecb4411941bbddb3d7cf8a8ff1163fbb510e"
+  integrity sha512-QAfipLcNCWLVocVbZW8GimKn5p5iiMcgGbRzz8z/P5q7xw+cNEpYqyzFMtIF/ZgF2HLOyy+dYBut+DoYolvqig==
+  dependencies:
+    "@typescript-eslint/utils" "^6.0.0 || ^7.0.0 || ^8.0.0"
+
 eslint-plugin-jest@^27.9.0:
   version "27.9.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-27.9.0.tgz#7c98a33605e1d8b8442ace092b60e9919730000b"
   integrity sha512-QIT7FH7fNmd9n4se7FFKHbsLKGQiw885Ds6Y/sxKgCZ6natwCsXdgPOADnYVxN2QrRweF0FZWbJ6S7Rsn7llug==
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
-
-eslint-plugin-jest@^28.11.0:
-  version "28.11.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-28.11.0.tgz#2641ecb4411941bbddb3d7cf8a8ff1163fbb510e"
-  integrity sha512-QAfipLcNCWLVocVbZW8GimKn5p5iiMcgGbRzz8z/P5q7xw+cNEpYqyzFMtIF/ZgF2HLOyy+dYBut+DoYolvqig==
-  dependencies:
-    "@typescript-eslint/utils" "^6.0.0 || ^7.0.0 || ^8.0.0"
 
 eslint-plugin-react-hooks@^4.6.0:
   version "4.6.2"
@@ -6508,12 +6508,12 @@ react-native-builder-bob@0.18.2:
   optionalDependencies:
     jetifier "^1.6.6"
 
-react-native-safe-area-context@^5.3.0:
+react-native-safe-area-context@5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-5.3.0.tgz#272e6786a58aafe3362fde4d3233713b66158179"
   integrity sha512-glV9bwuozTjf/JDBIBm+ITnukHNaUT3nucgdeADwjtHsfEN3RL5UO6nq99vvdWv5j/O9yCZBvFncM1BBQ+UvpQ==
 
-react-native-screens@^4.10.0:
+react-native-screens@4.10.0:
   version "4.10.0"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-4.10.0.tgz#40634aead590c6b7034ded6a9f92465d1d611906"
   integrity sha512-Tw21NGuXm3PbiUGtZd0AnXirUixaAbPXDjNR0baBH7/WJDaDTTELLcQ7QRXuqAWbmr/EVCrKj1348ei1KFIr8A==

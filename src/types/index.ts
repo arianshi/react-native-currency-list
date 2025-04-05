@@ -1,17 +1,20 @@
-type Metadata = {
-  data: [];
+type CurrencyInfo = {
+	id: string;
+	name: string;
+	symbol: string;
+	code?: string;
 };
 
-/**
- * ICurrencyList Context props
- */
+type Metadata = {
+  data: CurrencyInfo[];
+};
+
 type ICurrencyListContextProps = {
-  /**
-   * Navigation object of the container app
-   * */
   parentNavigation?: any;
   metadata: Metadata;
 };
+
 export {
+  CurrencyInfo,
   ICurrencyListContextProps,
 };
