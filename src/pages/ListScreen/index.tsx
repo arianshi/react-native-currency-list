@@ -10,6 +10,7 @@ import useCurrencyListContext from '../../hooks/useCurrencyListContext';
 
 import styles from './styles';
 import { SearchBar } from '../../components/SearchBar/index';
+import { useCurrencySearch } from '../../hooks/useCurrencySearch';
 
 export default function CurrencyList() {
   const {
@@ -17,13 +18,14 @@ export default function CurrencyList() {
   } = useCurrencyListContext();
 
   const [search, setSearch] = useState('');
+  const filtered = useCurrencySearch(data, search);
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{'List Crypocurrency'}</Text>
       <SearchBar value={search} onChangeText={setSearch} />
       <FlatList
-        data={data}
+        data={filtered}
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.listContainer}
         renderItem={({ item }) => (

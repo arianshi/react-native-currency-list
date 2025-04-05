@@ -15,5 +15,6 @@ type ICurrencyListContextProps = {
 };
 
 export {
+  CurrencyInfo,
   ICurrencyListContextProps,
 };
