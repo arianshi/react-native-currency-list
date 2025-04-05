@@ -36,14 +36,15 @@ const ListStack = () => {
 };
 
 const CurrencyListNavContainer = () => {
-  console.log('--CurrencyListModule---');
   return (
     <NavigationContainer
       ref={(navigatorRef) => {
         NavigationService.setTopLevelNavigator(navigatorRef);
       }}
     >
-      <Screen><ListStack /></Screen>
+       <Screen>
+          <ListStack />
+        </Screen>
     </NavigationContainer>
   );
 };
