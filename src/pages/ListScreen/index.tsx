@@ -18,14 +18,14 @@ export default function CurrencyList() {
 
   const [search, setSearch] = useState('');
 
-
   return (
-    <View>
+    <View style={styles.container}>
+      <Text style={styles.title}>{'List Crypocurrency'}</Text>
       <SearchBar value={search} onChangeText={setSearch} />
       <FlatList
         data={data}
         keyExtractor={(item) => item.id}
-        contentContainerStyle={styles.container}
+        contentContainerStyle={styles.listContainer}
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.itemContainer}

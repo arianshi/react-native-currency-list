@@ -2,14 +2,25 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
+    backgroundColor: 'rgb(13,19,37)',
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: 600,
+    paddingTop: 10,
+    color: '#fff',
+    textAlign: 'center'
+  },
+  listContainer: {
+    paddingLeft: 16,
+    paddingRight: 16,
   },
   itemContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    borderBottomColor: 'rgb(37,44,62)',
   },
   avatar: {
     width: 40,
@@ -21,7 +32,7 @@ const styles = StyleSheet.create({
     marginRight: 16,
   },
   avatarText: {
-    color: 'white',
+    color: '#fff',
     fontWeight: 'bold',
     fontSize: 16,
   },
@@ -31,10 +42,11 @@ const styles = StyleSheet.create({
   nameText: {
     fontSize: 16,
     fontWeight: '500',
+    color: '#fff',
   },
   symbolText: {
     fontSize: 14,
-    color: '#888',
+    color: '#fff',
     marginRight: 8,
   },
 });
