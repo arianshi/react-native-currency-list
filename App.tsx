@@ -5,7 +5,6 @@ import { cryptoList } from './db/index';
 
 function App(): React.JSX.Element {
   return <CurrencyListModule metadata={{ data: cryptoList}}/>;
-
 }
 
 export default App;
