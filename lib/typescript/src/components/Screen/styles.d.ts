@@ -1,6 +1,6 @@
 declare const styles: {
-    container: {
-        flexGrow: number;
+    safeContainer: {
+        flex: number;
         backgroundColor: string;
     };
 };

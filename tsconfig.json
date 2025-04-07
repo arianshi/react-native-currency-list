@@ -3,7 +3,7 @@
     "declaration": true,
     "baseUrl": "./",
     "paths": {
-      "@crypto/sunshine-module": ["./src/index"]
+      "react-native-currency-list": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "esModuleInterop": true,
