@@ -22,7 +22,7 @@ const SearchBar = ({ value, onChangeText, handleClear }: {
       />
       {value.length > 0 && (
         <TouchableOpacity onPress={handleClear}>
-          <Icon name="close-circle" size={20} color="#B4BBD0" style={styles.clearIcon} />
+          <Icon name="close-circle" size={20} color="#B4BBD0"/>
         </TouchableOpacity>
       )}
     </View>
