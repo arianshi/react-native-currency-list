@@ -1,6 +1,6 @@
 {
   "name": "react-native-currency-lists",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/react-native-currency-list/src/index.d.ts",
