@@ -5,6 +5,22 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'rgb(13,19,37)',
   },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  backButton: {
+    position: 'absolute',
+    left: 10,
+    bottom: 0,
+    zIndex: 1,
+  },
+  titleWrapper: {
+    flex: 1,
+    alignItems: 'center',
+  },
   title: {
     fontSize: 16,
     fontWeight: 600,

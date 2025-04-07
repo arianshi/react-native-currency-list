@@ -9,13 +9,16 @@ import {
 import useCurrencyListContext from '../../hooks/useCurrencyListContext';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { EmptyState } from '../../components/EmptyState';
-
 import { SearchBar } from '../../components/SearchBar/index';
 import { useCurrencySearch } from '../../hooks/useCurrencySearch';
+import { useNavigation } from '@react-navigation/native';
+
 
 import styles from './styles';
 
 export default function CurrencyList() {
+  const navigation = useNavigation();
+
   const {
     metadata: { data },
   } = useCurrencyListContext();
@@ -29,7 +32,14 @@ export default function CurrencyList() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{'List Cryptocurrency'}</Text>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+          <Icon name="chevron-back" size={24} color="#fff" />
+        </TouchableOpacity>
+        <View style={styles.titleWrapper}>
+          <Text style={styles.title}>{'List Cryptocurrency'}</Text>
+        </View>
+      </View>
       <SearchBar value={search} onChangeText={setSearch} handleClear={handleClear}/>
       {filtered.length === 0 ? (
         <EmptyState />
