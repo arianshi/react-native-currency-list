@@ -1,5 +1,5 @@
 import { Context, createContext } from 'react';
-import { ICurrencyListContextProps } from '../types';
+import { ICurrencyListContextProps } from '../type';
 
 const CurrencyListContext: Context<ICurrencyListContextProps> =
   createContext<ICurrencyListContextProps>({} as ICurrencyListContextProps);

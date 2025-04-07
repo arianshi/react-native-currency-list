@@ -1,13 +1,12 @@
 {
-  "name": "react-native-currency-list",
-  "version": "0.1.0",
-  "private": false,
-  "main": "src/index.tsx",
-  "module": "lib/module/index.js",
-  "types": "lib/typescript/index.d.ts",
-  "react-native": "src/index.tsx",
+  "name": "react-native-currency-lists",
+  "version": "0.1.4",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/react-native-currency-list/src/index.d.ts",
+  "react-native": "src/index",
   "source": "src/index",
-  "author": "arianandcode@gmail.com",
+  "author": "arianwithcode@gmail.com",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
@@ -60,18 +59,17 @@
   "engines": {
     "node": ">=18"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
     "targets": [
       "commonjs",
       "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
+      "typescript"
     ]
   }
 }

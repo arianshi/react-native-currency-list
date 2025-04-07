@@ -3,7 +3,7 @@ import CurrencyListNavContainer from './navigations/index';
 import { CurrencyListProvider } from './contexts';
 import type {
   ICurrencyListContextProps,
-} from './types';
+} from './type';
 
 const EnhancedNavContainer = CurrencyListNavContainer;
 

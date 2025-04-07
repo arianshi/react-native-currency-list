@@ -3,7 +3,7 @@
     "declaration": true,
     "baseUrl": "./",
     "paths": {
-      "@crypto/sunshine-module": ["./src/index"]
+      "react-native-currency-list": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "esModuleInterop": true,
@@ -20,8 +20,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "esnext",
-    "outDir": "lib"
+    "target": "esnext"
   },
   "exclude": ["**/__tests__/*"]
 }
