@@ -1,9 +1,9 @@
 {
   "name": "react-native-currency-lists",
-  "version": "0.1.3",
-  "main": "dist/commonjs/index",
-  "module": "dist/module/index",
-  "types": "dist/typescript/react-native-currency-list/src/index.d.ts",
+  "version": "0.1.4",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/react-native-currency-list/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "author": "arianwithcode@gmail.com",
@@ -65,7 +65,7 @@
   },
   "react-native-builder-bob": {
     "source": "src",
-    "output": "dist",
+    "output": "lib",
     "targets": [
       "commonjs",
       "module",

@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { CurrencyInfo } from '../types/index';
+import { CurrencyInfo } from '../type';
 
 export const useCurrencySearch = (currencies: CurrencyInfo[], search: string) => {
 	return useMemo(() => {
