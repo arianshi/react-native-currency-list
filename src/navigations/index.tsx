@@ -1,8 +1,5 @@
 import React from 'react';
-import { NavigationIndependentTree } from '@react-navigation/core';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import NavigationService from './NavigationService';
 import type { RootStackParamList } from './types';
 import Screen from '../components/Screen';
 import { ROUTES } from '../utils/constants';
@@ -37,18 +34,9 @@ const ListStack = () => {
 };
 
 const CurrencyListNavContainer = () => {
-  return (
-    <NavigationIndependentTree>
-    <NavigationContainer
-      ref={(navigatorRef) => {
-        NavigationService.setTopLevelNavigator(navigatorRef);
-      }}
-    >
-       <Screen>
-          <ListStack />
-        </Screen>
-    </NavigationContainer>
-    </NavigationIndependentTree>
+  return ( <Screen>
+    <ListStack />
+    </Screen>
   );
 };
 
