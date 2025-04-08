@@ -17,7 +17,7 @@ module.exports = {
   ],
   collectCoverage: true,
   coverageDirectory: 'coverage',
-  coverageReporters: ['json', 'text', 'lcov'],
+  coverageReporters: ['json-summary', 'lcov', 'text'],
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: ['/node_modules/', '/android/', '/ios/'],

@@ -37,8 +37,8 @@ jobs:
       - name: Report Jest coverage to PR
         uses: adRise/jest-cov-reporter@main
         with:
-          branch-coverage-report-path: ./coverage/coverage-final.json
-          base-coverage-report-path: ./coverage/coverage-final.json
+          branch-coverage-report-path: ./coverage/coverage-summary.json
+          base-coverage-report-path: ./coverage/coverage-summary.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           accessToken: ${{ secrets.GITHUB_TOKEN }}
           fullCoverageDiff: false
