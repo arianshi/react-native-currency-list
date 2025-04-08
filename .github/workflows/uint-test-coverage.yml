@@ -1,10 +1,12 @@
 name: Unit Coverage Reports
+
 on:
   pull_request:
     branches:
       - "*" # matches every branch that doesn't contain a '/'
       - "*/*" # matches every branch containing a single '/'
       - "**" # matches every branch
+
 jobs:
   generate-frontend-coverage:
     name: Generate client-app Coverage Report
@@ -12,20 +14,26 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
       - name: Install dependencies
         run: yarn
 
-      - name: Run client-app tests
+      - name: Run Jest tests with coverage
         run: yarn run test --coverage
 
-      - name: Generate client-app Coverage Report
-        if: always()
-        uses: Jtest/jtest-coverage-report-action@v1
+      - name: Report Jest coverage to PR
+        uses: adRise/jest-cov-reporter@main
         with:
-          name: "react-native-currency-list"
-          jtest-config-path: "./jtest.config.js"
-          json-summary-path: "./coverage/coverage-summary.json"
-          json-final-path: "./coverage/coverage-final.json"
-          file-coverage-mode: "all"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          coverage-summary-path: "./coverage/coverage-summary.json"
