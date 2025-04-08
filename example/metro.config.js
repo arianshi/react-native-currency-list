@@ -1,11 +1,12 @@
-const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
+const path = require('path');
 
-/**
- * Metro configuration
- * https://reactnative.dev/docs/metro
- *
- * @type {import('@react-native/metro-config').MetroConfig}
- */
-const config = {};
-
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+module.exports = {
+  resolver: {
+    extraNodeModules: {
+      'react-native-currency-list': path.resolve(__dirname, '..', 'lib'),
+    },
+  },
+  watchFolders: [
+    path.resolve(__dirname, '..', 'lib'),
+  ],
+};
