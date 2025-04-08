@@ -1,17 +1,24 @@
 import { useMemo } from 'react';
 import { CurrencyInfo } from '../type';
 
-export const useCurrencySearch = (currencies: CurrencyInfo[], search: string) => {
-	return useMemo(() => {
-	const q = search.toLowerCase();
-	return currencies.filter((item) => {
-	const name = item.name.toLowerCase();
-	const symbol = item.symbol.toLowerCase();
-	return (
-		name.startsWith(q) ||
-		name.includes(' ' + q) ||
-		symbol.startsWith(q)
-	);
-	});
-	}, [currencies, search]);
-  };
+export const useCurrencySearch = (
+  currencies: CurrencyInfo[],
+  search: string
+): CurrencyInfo[] => {
+  return useMemo(() => {
+    const query = search.trim().toLowerCase();
+
+    if (!query) {return currencies;}
+
+    return currencies.filter(({ name, symbol }) => {
+      const nameLower = name.toLowerCase();
+      const symbolLower = symbol.toLowerCase();
+
+      return (
+        nameLower.startsWith(query) ||
+        nameLower.includes(' ' + query) ||
+        symbolLower.startsWith(query)
+      );
+    });
+  }, [currencies, search]);
+};

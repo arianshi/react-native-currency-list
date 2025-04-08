@@ -9,9 +9,9 @@ const EnhancedNavContainer = CurrencyListNavContainer;
 
 type CurrencyListModuleProps = ICurrencyListContextProps;
 
-const CurrencyListModule: React.FC<CurrencyListModuleProps> = (
-  contextValue: CurrencyListModuleProps
-) => {
+const CurrencyListModule: React.FC<CurrencyListModuleProps> = ({
+  ...contextValue
+}) => {
   return (
     <CurrencyListProvider value={contextValue}>
       <EnhancedNavContainer/>

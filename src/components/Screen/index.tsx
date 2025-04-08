@@ -1,17 +1,27 @@
 import React, { ReactNode } from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+  SafeAreaProvider,
+  SafeAreaView,
+  Edge,
+} from 'react-native-safe-area-context';
 
+import { ViewStyle } from 'react-native';
 import styles from './styles';
 
 type ScreenProps = {
   children: ReactNode;
+  edges?: Edge[];
+  style?: ViewStyle;
 };
 
-const Screen = ({ children }: ScreenProps) => {
+const Screen: React.FC<ScreenProps> = ({
+  children,
+  edges = ['top', 'bottom'],
+  style,
+}) => {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.safeContainer}>
+      <SafeAreaView style={[styles.safeContainer, style]} edges={edges}>
         {children}
       </SafeAreaView>
     </SafeAreaProvider>
