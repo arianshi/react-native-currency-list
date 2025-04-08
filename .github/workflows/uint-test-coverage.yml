@@ -1,4 +1,4 @@
-name: Unit Coverage Reports
+name: uint-test-coverage
 
 on:
   pull_request:
