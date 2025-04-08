@@ -5604,10 +5604,10 @@ react-is@^19.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-19.1.0.tgz#805bce321546b7e14c084989c77022351bbdd11b"
   integrity sha512-Oe56aUPnkHyyDxxkvqtd7KkdQP5uIUfHxd5XTb3wE9d/kRnZLmKbDB0GWk919tdQ+mxxPtG6EAs6RMT6i1qtHg==
 
-react-native-currency-list@0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/react-native-currency-list/-/react-native-currency-list-0.1.6.tgz#78340c698e79fb266a4846c146262250b5a55d52"
-  integrity sha512-HMD8Fiv7b7DNUQIA/zhYei6QtnLyil3NHAvx0/QeEPIM8IwoJv1/9YAOeCozJpVgBW2l52pqjbt8wui5aRoNWw==
+react-native-currency-list@0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/react-native-currency-list/-/react-native-currency-list-0.1.7.tgz#c9f3e05afd5b785f287b07c652c67e81e5c75f23"
+  integrity sha512-XRh7GXaDbzGK6SgxC4+k3MnRuyxVChWHEUnkF65IrvUIaAeH3lUr0KQdC7tLL4digIBQfA1O7as6Y6S14vJHAw==
 
 react-native-safe-area-context@5.3.0:
   version "5.3.0"
