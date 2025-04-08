@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   generate-frontend-coverage:
-    name: Generate client-app Coverage Report
+    name: Generate Unit Coverage Report
     runs-on: ubuntu-latest
 
     steps:
