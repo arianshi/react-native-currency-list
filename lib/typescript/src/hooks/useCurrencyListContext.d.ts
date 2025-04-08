@@ -1,2 +1,3 @@
-declare const useCurrencyListContext: () => import("../type").ICurrencyListContextProps;
+import type { ICurrencyListContextProps } from '../type';
+declare const useCurrencyListContext: () => ICurrencyListContextProps;
 export default useCurrencyListContext;

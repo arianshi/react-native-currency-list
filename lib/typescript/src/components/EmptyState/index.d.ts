@@ -1,3 +1,8 @@
 import React from 'react';
-declare const EmptyState: () => React.JSX.Element;
+interface EmptyStateProps {
+    iconName?: string;
+    title?: string;
+    subtitle?: string;
+}
+declare const EmptyState: React.FC<EmptyStateProps>;
 export { EmptyState };

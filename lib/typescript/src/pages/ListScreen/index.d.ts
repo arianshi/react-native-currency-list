@@ -1,2 +1,3 @@
 import React from 'react';
-export default function CurrencyList(): React.JSX.Element;
+declare const CurrencyList: React.FC;
+export default CurrencyList;

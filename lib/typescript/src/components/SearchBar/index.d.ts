@@ -1,7 +1,8 @@
 import React from 'react';
-declare const SearchBar: ({ value, onChangeText, handleClear }: {
+type SearchBarProps = {
     value: string;
     onChangeText: (text: string) => void;
     handleClear: () => void;
-}) => React.JSX.Element;
+};
+declare const SearchBar: React.FC<SearchBarProps>;
 export { SearchBar };

@@ -16,5 +16,5 @@ export declare const NavigationTransitionOptions: () => {
         };
     };
 };
-declare const CurrencyListNavContainer: () => React.JSX.Element;
+declare const CurrencyListNavContainer: React.FC;
 export default CurrencyListNavContainer;
