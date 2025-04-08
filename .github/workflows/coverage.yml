@@ -1,0 +1,33 @@
+name: Unit Coverage Reports
+
+on:
+  pull_request:
+    branches:
+      - "*" # matches every branch that doesn't contain a '/'
+      - "*/*" # matches every branch containing a single '/'
+      - "**" # matches every branch
+
+jobs:
+  generate-frontend-coverage:
+    name: Generate client-app Coverage Report
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run client-app tests
+        run: yarn run test --coverage
+
+      - name: Generate client-app Coverage Report
+        if: always()
+        uses: Jtest/jtest-coverage-report-action@v1
+        with:
+          name: "react-native-currency-list"
+          jtest-config-path: "./jtest.config.js"
+          json-summary-path: "./coverage/coverage-summary.json"
+          json-final-path: "./coverage/coverage-final.json"
+          file-coverage-mode: "all"
