@@ -1,9 +1,7 @@
-name: uint-test-coverage
+name: uint-test
 
 on:
   pull_request:
-    branches: [main]
-  push:
     branches: [main]
 
 permissions:
@@ -12,7 +10,7 @@ permissions:
 
 jobs:
   generate-frontend-coverage:
-    name: Generate Unit Coverage Report
+    name: coverage
     runs-on: ubuntu-latest
 
     steps:
