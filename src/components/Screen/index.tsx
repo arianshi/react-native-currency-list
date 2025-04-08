@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import styles from './styles';
@@ -9,9 +10,11 @@ type ScreenProps = {
 
 const Screen = ({ children }: ScreenProps) => {
   return (
-    <SafeAreaView style={styles.safeContainer}>
-      {children}
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.safeContainer}>
+        {children}
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
