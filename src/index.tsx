@@ -19,4 +19,7 @@ const CurrencyListModule: React.FC<CurrencyListModuleProps> = (
   );
 };
 
+CurrencyListModule.displayName = 'CurrencyListModule';
+
+
 export default CurrencyListModule;
