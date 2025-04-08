@@ -1,12 +1,10 @@
 name: Unit Coverage Reports
-
 on:
   pull_request:
     branches:
       - "*" # matches every branch that doesn't contain a '/'
       - "*/*" # matches every branch containing a single '/'
       - "**" # matches every branch
-
 jobs:
   generate-frontend-coverage:
     name: Generate client-app Coverage Report
