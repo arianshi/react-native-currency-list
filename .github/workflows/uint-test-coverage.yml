@@ -2,8 +2,9 @@ name: uint-test-coverage
 
 on:
   pull_request:
-    branches:
-      - "**"
+    branches: [main]
+  push:
+    branches: [main]
 
 permissions:
   pull-requests: write
