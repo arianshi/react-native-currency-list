@@ -17,7 +17,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
 }) => {
   return (
     <View style={styles.container}>
-      <Icon name={iconName} size={60} color="#B4BBD0" />
+      <Icon name={iconName} size={60} color="#B4BBD0" testID="icon"/>
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.subtitle}>{subtitle}</Text>
     </View>

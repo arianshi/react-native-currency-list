@@ -1,10 +1,13 @@
 {
   "root": true,
-  "extends": ["@react-native/eslint-config"],
+  "extends": [
+    "@react-native/eslint-config",
+    "plugin:jest/recommended"
+  ],
   "ignorePatterns": ["lib/*"],
   "overrides": [
     {
-      "files": ["*.test.js", "*.spec.js"],
+      "files": ["*.test.{js,ts,tsx}", "*.spec.{js,ts,tsx}", "jest.setup.js"],
       "env": {
         "jest/globals": true
       },
