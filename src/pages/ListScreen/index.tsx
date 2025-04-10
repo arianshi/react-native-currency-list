@@ -33,7 +33,6 @@ const CurrencyList: React.FC = () => {
     ({ item }: { item: typeof data[number] }) => (
       <TouchableOpacity
         style={styles.itemContainer}
-        onPress={() => console.log('onPress')}
       >
         <View style={styles.avatar}>
           <Text style={styles.avatarText}>
