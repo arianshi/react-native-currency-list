@@ -1,76 +1,104 @@
-# Getting Started
+# 📦 Currency List SDK
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+A cross-platform SDK (React Native, Android, iOS) for accessing currency lists and related currency data.
 
-## Step 1: Start Metro
+## 🚀 Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- ✅ Supports React Native (TypeScript)
+- 🤖 Native Android (Kotlin) integration
+- 🍎 Native iOS (Swift) integration
+- 📱 Example app for demo and testing
+- 🧪 Built-in unit tests with Jest
+- ⚙️ CI-ready with GitHub Actions
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
-npm start
+## 🧰 Installation
 
-# OR using Yarn
-yarn start
+```bash
+# Install via npm (for React Native usage)
+npm install react-native-currency-list
+Or
+yarn add react-native-currency-list
 ```
 
-## Step 2: Build and run your app
+Or clone and link manually for native integration or development.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+---
+
+## 📱 Usage (React Native)
+
+```tsx
+import React from "react";
+import CurrencyListModule from "react-native-currency-list";
+import {useCurrency} from "../../context/currencyContext";
+
+const CurrencyListScreen = () => {
+  const {data} = useCurrency();
+  return <CurrencyListModule metadata={{data}} />;
+};
+
+export {CurrencyListScreen};
+```
+
+> For more usage examples, check the `example/` directory.
+
+---
+
+## 🛠 Native Setup
 
 ### Android
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
+1. Navigate to `android/`
+2. Integrate module in your Android app as per standard library setup
+3. Make sure to include required permissions and dependencies
 
 ### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+1. Navigate to `ios/`
+2. Open in Xcode and add as a framework or local pod
+3. Ensure Swift support is enabled in your RN project
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+---
 
-```sh
-bundle install
+## 🧪 Testing
+
+```bash
+npm test
 ```
 
-Then, and every time you update your native dependencies, run:
+- Test framework: Jest
+- Configurations:
+  - `jest.config.js`
+  - `jest.setup.js`
 
-```sh
-bundle exec pod install
+---
+
+## 📂 Project Structure
+
+```
+├── android/         # Android native module (Kotlin)
+├── ios/             # iOS native module (Swift)
+├── src/             # TypeScript logic for RN
+├── lib/             # Shared utilities or core logic
+├── example/         # Sample React Native app
+├── .github/workflows/ # CI setup
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+---
 
-```sh
-# Using npm
-npm run ios
+## 🔧 Scripts
 
-# OR using Yarn
-yarn ios
+```bash
+# Run tests
+yarn run test
+
+# Lint code
+yarn run lint
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 📄 License
 
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
+MIT © 2025 Arian Shi
