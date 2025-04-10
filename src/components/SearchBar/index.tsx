@@ -27,7 +27,9 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChangeText, handleClear 
       />
 
       {showClear && (
-        <TouchableOpacity onPress={handleClear} accessibilityLabel="Clear Search">
+        <TouchableOpacity
+         testID="clear-button"
+         onPress={handleClear} accessibilityLabel="Clear Search">
           <Icon name="close-circle" size={20} color="#B4BBD0" />
         </TouchableOpacity>
       )}

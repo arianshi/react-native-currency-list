@@ -20,7 +20,7 @@ const Screen: React.FC<ScreenProps> = ({
   style,
 }) => {
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider testID="screen" >
       <SafeAreaView style={[styles.safeContainer, style]} edges={edges}>
         {children}
       </SafeAreaView>
