@@ -5,7 +5,6 @@ declare const styles: {
         backgroundColor: string;
         borderRadius: number;
         paddingHorizontal: number;
-        paddingVertical: number;
         marginHorizontal: number;
         marginTop: number;
         marginBottom: number;
@@ -17,6 +16,7 @@ declare const styles: {
         flex: number;
         color: string;
         fontSize: number;
+        paddingVertical: number;
     };
 };
 export default styles;

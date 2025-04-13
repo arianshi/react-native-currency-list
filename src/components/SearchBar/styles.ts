@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(22, 29, 50)',
     borderRadius: 22,
     paddingHorizontal: 14,
-    paddingVertical: 12,
     marginHorizontal: 16,
     marginTop: 16,
     marginBottom: 12,
@@ -19,6 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: 'white',
     fontSize: 16,
+    paddingVertical: 12,
   },
 });
 
